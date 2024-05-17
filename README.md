@@ -14,4 +14,4 @@ I should have a thorough understanding of Java programming by the conclusion of 
 - (14-05-2024) Day 1: Basic knowledge of Java, How Java Works , Skeleton of a Java program , Scanner Class. 
 - (15-05-2024) Day 2: Basic functionality of variables, Variable declaration, Literals. 
 - (16-05-2024) Day 3: More about Datatypes Variables, Check Binary Bits of an Integer.
-
+- (17-05-2024) Day 4: Compiler vs Interpreter, How Java is Platform Independent, JVM Architecture, Features of Java.
