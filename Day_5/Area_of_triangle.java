@@ -1,7 +1,7 @@
 import java.lang.*;
 import java.util.*;
 
-class Arithematic {
+class Area_of_triangle {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
