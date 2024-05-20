@@ -1,0 +1,12 @@
+throught this we can store 2 digits in a single byte
+we will declare 2 variables, a and b in byte(shortest datatype)
+1st digit  will occupy 4 bits from total 8 bites and get stored into "a" variable
+2nd digit  will occupy 4 bits from total 8 bites and get stored into "b" variable
+we will right shift the value of variable a 4 times. a = (a<<4) 
+then we will get the value of (a|b) aORb. then because of the truth table of OR it will give
+the value of a and b (a in first 4 bits ) (b in next 4 bite)
+4bits+4bits=1 byte(smallest datatype)
+the we will print and see the result.
+
+
+https://www.instagram.com/p/C7MibEmvx0U/
