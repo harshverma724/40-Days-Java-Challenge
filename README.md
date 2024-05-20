@@ -16,3 +16,5 @@ I should have a thorough understanding of Java programming by the conclusion of 
 - (16-05-2024) Day 3: More about Datatypes Variables, Check Binary Bits of an Integer.
 - (17-05-2024) Day 4: Compiler vs Interpreter, How Java is Platform Independent, JVM Architecture, Features of Java.
 - (18-05-2024) Day 5: Operators and Expressions, Program to find the area of a tirangle using 2 methods.
+- (19-05-2024) Day 6: Operators and Expressions, Bitwise Operators(AND,OR,XOR,Left_shift,Right_shift),Find area of cuboid, Find square_root of a quadratic equation.
+- (20-05-2024) Day 7: Operators and Expressions, merging and swapping, storing 2 digits in 1 byte in a single variable, awapping 2 numbers with (XOR "^") Operator.
