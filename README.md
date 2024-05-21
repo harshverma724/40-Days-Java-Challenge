@@ -18,3 +18,4 @@ I should have a thorough understanding of Java programming by the conclusion of 
 - (18-05-2024) Day 5: Operators and Expressions, Program to find the area of a tirangle using 2 methods.
 - (19-05-2024) Day 6: Operators and Expressions, Bitwise Operators(AND,OR,XOR,Left_shift,Right_shift),Find area of cuboid, Find square_root of a quadratic equation.
 - (20-05-2024) Day 7: Operators and Expressions, merging and swapping, storing 2 digits in 1 byte in a single variable, awapping 2 numbers with (XOR "^") Operator.
+- (21-05-2024) Day 8: Printing using System.out.print(),println(),printf(),format().  Formatted Output.
