@@ -20,3 +20,4 @@ I should have a thorough understanding of Java programming by the conclusion of 
 - (20-05-2024) Day 7: Operators and Expressions, merging and swapping, storing 2 digits in 1 byte in a single variable, awapping 2 numbers with (XOR "^") Operator.
 - (21-05-2024) Day 8: Printing using System.out.print(),println(),printf(),format().  Formatted Output.
 - (22-05-2024) Day 8: Formatted Output, Flags , Width, String , Sting Constrants , Object Pool.
+- (23-05-2024) Day 8: String Methods.
