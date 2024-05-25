@@ -22,4 +22,4 @@ I should have a thorough understanding of Java programming by the conclusion of 
 - (22-05-2024) Day 9: Formatted Output, Flags , Width, String , Sting Constrants , Object Pool.
 - (23-05-2024) Day 10: String Methods, Regular Expressions{. ,[abc] , [abc][vz] , [^abc] , [a-z][0-9] , A|B , XZ}.
 - (24-05-2024) Day 11: String Methods, Meta Expressions{ \w , \W , \s , \S , \d , \D }, Quantifiers{* , + , {X} , {X}{Y} , ?}, 3 programs based on expressions.
-- (25-05-2024) Day 12: 6 Programs based on expressions,Conditional Statement.
+- (25-05-2024) Day 12: 6 Programs based on expressions, Conditional Statement, 9 Programs based on conditional statement, Switch case, 5 Programs based on Switch Case.
