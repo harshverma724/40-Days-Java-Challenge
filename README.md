@@ -29,5 +29,6 @@ I should have a thorough understanding of Java programming by the conclusion of 
 - (29-05-2024) Day 16: 6 Programs using Arrays, 2 Dimensional Arrays, 5 Programs of 2D Arrays , Matrics , 2 Programs of Matricsusing 2D Array.
 - (30-05-2024) Day 17: Methods in java, 6 programs using methods, Parameter passing.
 - (31-05-2024) Day 18: Methods in java, Parameter Passing, Method Overloading, Polymorpism, Variable Arguments, Commandline Arguments, Recursion, Principles of Object Oriented Programming, Class VS Object, Data Hiding, 15 Programs on topics studied today.
-- (01-06-2024) Day 19: Data Hiding, Constructor, Property Methods , Constructor Overloading, Array Of Objects, 6 Programs Based on these Topics. 
+- (01-06-2024) Day 19: Data Hiding, Constructor, Property Methods , Constructor Overloading, Array Of Objects, 6 Programs Based on these Topics.
+- (02-06-2024) Day 20: Inheritance, Constructor Inheritance, super(), 6 Programs Based on these topics.
 - To Be Continued....
