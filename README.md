@@ -32,5 +32,5 @@ I should have a thorough understanding of Java programming by the conclusion of 
 - (01-06-2024) Day 19: Data Hiding, Constructor, Property Methods , Constructor Overloading, Array Of Objects, 6 Programs Based on these Topics.
 - (02-06-2024) Day 20: Inheritance, Constructor Inheritance, super(), 6 Programs Based on these topics.
 - (03-06-2024) Day 21: this $ super,this VS super, Method Overriding, Dynamic Method Dispatch, Polymorphism, Abstract Class, 11 Programs Based on these topics.
-- (03-06-2024) Day 21:
+- (03-06-2024) Day 21: Interfaces.
 - To Be Continued....
