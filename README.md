@@ -35,5 +35,5 @@ I should have a thorough understanding of Java programming by the conclusion of 
 - (04-06-2024) Day 22: Interfaces, 2 Programs on Interfaces.
 - (05-06-2024) Day 23: Inner Class, Nested Class, Local Inner Class, Static, Static Blocks, Final, Singleton Class, 10 Programs based on these topics.
 - (06-06-2024) Day 24: Packages, Access Modifiers, Package Naming Convention.
-- (07-06-2024) Day 25: Exception handling, 
+- (07-06-2024) Day 25: Exception handling, Exception Classes, User Defined Exception, Try with Resources, 9 programs based on these topics.
 - To Be Continued....
