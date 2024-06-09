@@ -37,5 +37,6 @@ I should have a thorough understanding of Java programming by the conclusion of 
 - (06-06-2024) Day 24: Packages, Access Modifiers, Package Naming Convention.
 - (07-06-2024) Day 25: Exception handling, Exception Classes, User Defined Exception, Try with Resources, 9 programs based on these topics.
 - (08-06-2024) Day 26: MultiThreading, Thread Class, Runnable Interfaces, 4 Programs Based on MultiThreading.
-- (09-06-2024) Day 27: State of a Thread,
+- (09-06-2024) Day 27: State of a Thread, Thread Priorities, 
+, 
 - To Be Continued....
