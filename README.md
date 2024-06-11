@@ -39,4 +39,5 @@ I should have a thorough understanding of Java programming by the conclusion of 
 - (08-06-2024) Day 26: MultiThreading, Thread Class, Runnable Interfaces, 4 Programs Based on MultiThreading.
 - (09-06-2024) Day 27: State of a Thread, Thread Priorities, Thread Class, Synchronization, Thread Methods, 5 programs based on these topics.
 - (28-06-2024) Day 28: Inter-Thread Communication, Java Lang Package, Java Doc, Annotations, 11 Programs basted on these topics.
+- (29-06-2024) Day 29: Lambda Expression, 5 programs based on Lambda Expression.
 - To Be Continued....
