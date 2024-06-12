@@ -38,6 +38,7 @@ I should have a thorough understanding of Java programming by the conclusion of 
 - (07-06-2024) Day 25: Exception handling, Exception Classes, User Defined Exception, Try with Resources, 9 programs based on these topics.
 - (08-06-2024) Day 26: MultiThreading, Thread Class, Runnable Interfaces, 4 Programs Based on MultiThreading.
 - (09-06-2024) Day 27: State of a Thread, Thread Priorities, Thread Class, Synchronization, Thread Methods, 5 programs based on these topics.
-- (28-06-2024) Day 28: Inter-Thread Communication, Java Lang Package, Java Doc, Annotations, 11 Programs basted on these topics.
-- (29-06-2024) Day 29: Lambda Expression, 5 programs based on Lambda Expression.
+- (10-06-2024) Day 28: Inter-Thread Communication, Java Lang Package, Java Doc, Annotations, 11 Programs basted on these topics.
+- (11-06-2024) Day 29: Lambda Expression, 5 programs based on Lambda Expression.
+- (12-06-2024) Day 30: File Streams,Byte Input / Output Stream, ByteArray Input / Output Stream, CharArray Reader,  11 Programs based on these topics. 
 - To Be Continued....
