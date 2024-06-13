@@ -40,5 +40,6 @@ I should have a thorough understanding of Java programming by the conclusion of 
 - (09-06-2024) Day 27: State of a Thread, Thread Priorities, Thread Class, Synchronization, Thread Methods, 5 programs based on these topics.
 - (10-06-2024) Day 28: Inter-Thread Communication, Java Lang Package, Java Doc, Annotations, 11 Programs basted on these topics.
 - (11-06-2024) Day 29: Lambda Expression, 5 programs based on Lambda Expression.
-- (12-06-2024) Day 30: File Streams,Byte Input / Output Stream, ByteArray Input / Output Stream, CharArray Reader,  11 Programs based on these topics. 
+- (12-06-2024) Day 30: File Streams,Byte Input / Output Stream, ByteArray Input / Output Stream, CharArray Reader,  11 Programs based on these topics.
+- (13-06-2024) Day 31: Buffered Reader and Bubbered Stream, Random Access File, Print Stream, 12 Programs Based on these topics.
 - To Be Continued....
