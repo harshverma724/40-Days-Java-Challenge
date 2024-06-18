@@ -46,5 +46,5 @@ I should have a thorough understanding of Java programming by the conclusion of 
 - (15-06-2024) Day 33: Collection Framework, InterfaceCollection, List Interface, Set Collection, Queue, Array Linked List, Array Dequeue, Priority Queue, 10 Programs based on these topics.
 - (16-06-2024) Day 34: Hashing, TreeMap , HashMap , Linked HashMaop, Linked HashSet, HashTable, Properties, String Tokenizer, BitSet, 10 Programs Based on these topics, 1 Project(Accounts).
 - (17-06-2024) Day 35: Date & Time Class, New Date & Time API(joda), Network Programming, Socket and Server Socket, Multithreaded Socket and Server Socket, Datagram Communication.
-- (18-06-2024) Day 36: JDBC, SQL Queries,
+- (18-06-2024) Day 36: JDBC, SQL Queries, Sql Aggregate Functions,
 - To Be Continued....
