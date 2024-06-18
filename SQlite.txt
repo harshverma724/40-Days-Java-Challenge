@@ -1,0 +1,552 @@
+PS C:\sqlLite> dir
+
+
+    Directory: C:\sqlLite
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        18-06-2024  09:20 PM        3115008 sqldiff.exe
+-a----        18-06-2024  09:20 PM        3773440 sqlite3.exe
+-a----        18-06-2024  09:20 PM        4387840 sqlite3_analyzer.exe
+
+
+PS C:\sqlLite> sqlite3
+sqlite3 : The term 'sqlite3' is not recognized as the name of a cmdlet, function, script file, or operable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ sqlite3
++ ~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (sqlite3:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+
+Suggestion [3,General]: The command sqlite3 was not found, but does exist in the current location. Windows PowerShell does not load commands from the current location by default. If you trust this command, instead type: ".\sqlite3". See "get-help about_Command_Precedence" for more details.
+PS C:\sqlLite> "C:\sqlLite\sqlite3.exe"
+C:\sqlLite\sqlite3.exe
+PS C:\sqlLite> sqlite3
+sqlite3 : The term 'sqlite3' is not recognized as the name of a cmdlet, function, script file, or operable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ sqlite3
++ ~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (sqlite3:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+
+Suggestion [3,General]: The command sqlite3 was not found, but does exist in the current location. Windows PowerShell does not load commands from the current location by default. If you trust this command, instead type: ".\sqlite3". See "get-help about_Command_Precedence" for more details.
+PS C:\sqlLite> "C:\\sqlLite\\sqlite3.exe"
+C:\\sqlLite\\sqlite3.exe
+PS C:\sqlLite> C:\\sqlLite\\sqlite3.exe
+SQLite version 3.46.0 2024-05-23 13:25:27 (UTF-16 console I/O)
+Enter ".help" for usage hints.
+Connected to a transient in-memory database.
+Use ".open FILENAME" to reopen on a persistent database.
+sqlite> --help
+sqlite> .help
+.archive ...             Manage SQL archives
+.auth ON|OFF             Show authorizer callbacks
+.backup ?DB? FILE        Backup DB (default "main") to FILE
+.bail on|off             Stop after hitting an error.  Default OFF
+.cd DIRECTORY            Change the working directory to DIRECTORY
+.changes on|off          Show number of rows changed by SQL
+.check GLOB              Fail if output since .testcase does not match
+.clone NEWDB             Clone data into NEWDB from the existing database
+.connection [close] [#]  Open or close an auxiliary database connection
+.crnl on|off             Translate \n to \r\n.  Default ON
+.databases               List names and files of attached databases
+.dbconfig ?op? ?val?     List or change sqlite3_db_config() options
+.dbinfo ?DB?             Show status information about the database
+.dump ?OBJECTS?          Render database content as SQL
+.echo on|off             Turn command echo on or off
+.eqp on|off|full|...     Enable or disable automatic EXPLAIN QUERY PLAN
+.excel                   Display the output of next command in spreadsheet
+.exit ?CODE?             Exit this program with return-code CODE
+.expert                  EXPERIMENTAL. Suggest indexes for queries
+.explain ?on|off|auto?   Change the EXPLAIN formatting mode.  Default: auto
+.filectrl CMD ...        Run various sqlite3_file_control() operations
+.fullschema ?--indent?   Show schema and the content of sqlite_stat tables
+.headers on|off          Turn display of headers on or off
+.help ?-all? ?PATTERN?   Show help text for PATTERN
+.import FILE TABLE       Import data from FILE into TABLE
+.indexes ?TABLE?         Show names of indexes
+.intck ?STEPS_PER_UNLOCK?  Run an incremental integrity check on the db
+.limit ?LIMIT? ?VAL?     Display or change the value of an SQLITE_LIMIT
+.lint OPTIONS            Report potential schema issues.
+.load FILE ?ENTRY?       Load an extension library
+.log FILE|on|off         Turn logging on or off.  FILE can be stderr/stdout
+.mode MODE ?OPTIONS?     Set output mode
+.nonce STRING            Suspend safe mode for one command if nonce matches
+.nullvalue STRING        Use STRING in place of NULL values
+.once ?OPTIONS? ?FILE?   Output for the next SQL command only to FILE
+.open ?OPTIONS? ?FILE?   Close existing database and reopen FILE
+.output ?FILE?           Send output to FILE or stdout if FILE is omitted
+.parameter CMD ...       Manage SQL parameter bindings
+.print STRING...         Print literal STRING
+.progress N              Invoke progress handler after every N opcodes
+.prompt MAIN CONTINUE    Replace the standard prompts
+.quit                    Stop interpreting input stream, exit if primary.
+.read FILE               Read input from FILE or command output
+.recover                 Recover as much data as possible from corrupt db.
+.restore ?DB? FILE       Restore content of DB (default "main") from FILE
+.save ?OPTIONS? FILE     Write database to FILE (an alias for .backup ...)
+.scanstats on|off|est    Turn sqlite3_stmt_scanstatus() metrics on or off
+.schema ?PATTERN?        Show the CREATE statements matching PATTERN
+.separator COL ?ROW?     Change the column and row separators
+.session ?NAME? CMD ...  Create or control sessions
+.sha3sum ...             Compute a SHA3 hash of database content
+.shell CMD ARGS...       Run CMD ARGS... in a system shell
+.show                    Show the current values for various settings
+.stats ?ARG?             Show stats or turn stats on or off
+.system CMD ARGS...      Run CMD ARGS... in a system shell
+.tables ?TABLE?          List names of tables matching LIKE pattern TABLE
+.timeout MS              Try opening locked tables for MS milliseconds
+.timer on|off            Turn SQL timer on or off
+.trace ?OPTIONS?         Output each SQL statement as it is run
+.version                 Show source, library and compiler versions
+.vfsinfo ?AUX?           Information about the top-level VFS
+.vfslist                 List all available VFSes
+.vfsname ?AUX?           Print the name of the VFS stack
+.width NUM1 NUM2 ...     Set minimum column widths for columnar output
+sqlite> show databases
+   ...> ;
+Parse error: near "show": syntax error
+  show databases ;
+  ^--- error here
+sqlite> databases;
+Parse error: near "databases": syntax error
+  databases;
+  ^--- error here
+sqlite> .open univ.db
+sqlite> .databases
+main: C:\sqlLite\univ.db r/w
+sqlite> create table dept(deptno integer primary key not null unique, dname text);
+sqlite> .tables
+dept
+sqlite> create table student(rollno integer primary key , name text, city text, deptno integer foreignkey (deptno) );
+Parse error: near "deptno": syntax error
+   name text, city text, deptno integer foreignkey (deptno) );
+                                      error here ---^
+sqlite> create table student(rollno integer primary key , name text, city text, deptno integer foreignkey (deptno) references dept(deptno);
+Parse error: near "deptno": syntax error
+   name text, city text, deptno integer foreignkey (deptno) references dept(dept
+                                      error here ---^
+sqlite> create table student(rollno integer primary key , name text, city text, deptno integer foreign key (deptno) refe
+rences dept(deptno);
+Parse error: near "foreign": syntax error
+  rimary key , name text, city text, deptno integer foreign key (deptno) referen
+                                      error here ---^
+sqlite> create table student(rollno integer primary key , name text, city text, deptno integer foreign key (deptno) references dept(deptno));
+Parse error: near "foreign": syntax error
+  rimary key , name text, city text, deptno integer foreign key (deptno) referen
+                                      error here ---^
+sqlite> create table student(rollno integer primary key , name text, city text, deptno integer, foreign key (deptno) ref
+erences dept(deptno));
+sqlite> .tables
+dept     student
+sqlite> insert into deptvalues(10,'CSE');
+Parse error: near "10": syntax error
+  insert into deptvalues(10,'CSE');
+                         ^--- error here
+sqlite> insert into dept values(10,'CSE');
+sqlite> insert into dept values(11,'CIVIL');
+sqlite> insert into dept values(12,'ECE');
+sqlite> insert into dept values(13,'CC');
+sqlite> SELECT * FROM DEPT;
+10|CSE
+11|CIVIL
+12|ECE
+13|CC
+sqlite> PRAGMS FOREIGN_KEYS=ON;
+Parse error: near "PRAGMS": syntax error
+  PRAGMS FOREIGN_KEYS=ON;
+  ^--- error here
+sqlite> PRAGMS FOREIGN_KEYS=ON
+   ...> ;
+Parse error: near "PRAGMS": syntax error
+  PRAGMS FOREIGN_KEYS=ON ;
+  ^--- error here
+sqlite> PRAGMA FOREIGN_KEYS=ON;
+sqlite> insert into STUDENTS values(1,'AJAY','DELHI',10);
+Parse error: no such table: STUDENTS
+sqlite> insert into students values(1,'AJAY','DELHI',10);
+Parse error: no such table: students
+sqlite> .tables
+dept     student
+sqlite> insert into student values(1,'AJAY','DELHI',10);
+sqlite> insert into student values(1,'VIJAY','Jaipur',10);
+Runtime error: UNIQUE constraint failed: student.rollno (19)
+sqlite> insert into student values(2,'VIJAY','Jaipur',10);
+sqlite> SELECT * FROM student;
+1|AJAY|DELHI|10
+2|VIJAY|Jaipur|10
+sqlite> insert into student values(3,'RAM','KOLKATA',11);
+sqlite> insert into student values(3,'LAKHAN','KOLKATA',12);
+Runtime error: UNIQUE constraint failed: student.rollno (19)
+sqlite> insert into student values(4,'LAKHAN','KOLKATA',12);
+sqlite> insert into student values(5,'BANSI LAL','BASVA',13);
+sqlite> insert into student values(6,'KUSHAGRA','RAIPUR',13);
+sqlite> insert into student values(7,'KK MEENA','RAIPUR',10);
+sqlite> insert into student values(8, 'RADHA' , 'BANJA' , 10);
+sqlite> insert into student values(9, 'DEHRU' , 'KOTA' , 13);
+sqlite> insert into student values(10, 'ACHRAJ' , 'PUNE' , 12);
+sqlite> SELECT * FROM STUDENT;
+1|AJAY|DELHI|10
+2|VIJAY|Jaipur|10
+3|RAM|KOLKATA|11
+4|LAKHAN|KOLKATA|12
+5|BANSI LAL|BASVA|13
+6|KUSHAGRA|RAIPUR|13
+7|KK MEENA|RAIPUR|10
+8|RADHA|BANJA|10
+9|DEHRU|KOTA|13
+10|ACHRAJ|PUNE|12
+sqlite> SELECT DISTINCT DEPTNO FROM STUDENT;
+10
+11
+12
+13
+sqlite> SELECT * FROM STUDENT WHERE NAME LIKE'A';
+sqlite> SELECT * FROM STUDENT WHERE NAME LIKE'A%';
+1|AJAY|DELHI|10
+10|ACHRAJ|PUNE|12
+sqlite> SELECT * FROM STUDENT WHERE DEPTNO BETWEEN 10 AND 12;
+1|AJAY|DELHI|10
+2|VIJAY|Jaipur|10
+3|RAM|KOLKATA|11
+4|LAKHAN|KOLKATA|12
+7|KK MEENA|RAIPUR|10
+8|RADHA|BANJA|10
+10|ACHRAJ|PUNE|12
+sqlite> SELECT * FROM STUDENT WHERE CITY IN ('DELHI','JAIPUR');
+1|AJAY|DELHI|10
+sqlite> SELECT * FROM STUDENT WHERE CITY IN ('DELHI','KOLKATA');
+1|AJAY|DELHI|10
+3|RAM|KOLKATA|11
+4|LAKHAN|KOLKATA|12
+sqlite> SELECT * FROM DEPTNO ORDERBY DENAME;
+Parse error: near "DENAME": syntax error
+  SELECT * FROM DEPTNO ORDERBY DENAME;
+                 error here ---^
+sqlite> SELECT * FROM DEPTNO ORDER BY DENAME;
+Parse error: no such table: DEPTNO
+sqlite> .TABLE
+Error: unknown command or invalid arguments:  "TABLE". Enter ".help" for help
+sqlite> .TABLES
+Error: unknown command or invalid arguments:  "TABLES". Enter ".help" for help
+sqlite> .table
+dept     student
+sqlite> SELECT * FROM DEPT ORDER BY DENAME;
+Parse error: no such column: DENAME
+  SELECT * FROM DEPT ORDER BY DENAME;
+                error here ---^
+sqlite> SELECT * FROM DEPT ORDER BY DENAME;
+Parse error: no such column: DENAME
+  SELECT * FROM DEPT ORDER BY DENAME;
+                error here ---^
+sqlite> SELECT * FROM DEPT ORDER BY dename;
+Parse error: no such column: dename
+  SELECT * FROM DEPT ORDER BY dename;
+                error here ---^
+sqlite> SELECT * FROM DEPT ORDER BY dename;
+Parse error: no such column: dename
+  SELECT * FROM DEPT ORDER BY dename;
+                error here ---^
+sqlite> SELECT * FROM DEPT ORDER BY dename desc;
+Parse error: no such column: dename
+  SELECT * FROM DEPT ORDER BY dename desc;
+                error here ---^
+sqlite> select * from students order by city;
+Parse error: no such table: students
+sqlite> select * from student order by city;
+8|RADHA|BANJA|10
+5|BANSI LAL|BASVA|13
+1|AJAY|DELHI|10
+2|VIJAY|Jaipur|10
+3|RAM|KOLKATA|11
+4|LAKHAN|KOLKATA|12
+9|DEHRU|KOTA|13
+10|ACHRAJ|PUNE|12
+6|KUSHAGRA|RAIPUR|13
+7|KK MEENA|RAIPUR|10
+sqlite> select * from student ,dept;
+1|AJAY|DELHI|10|10|CSE
+1|AJAY|DELHI|10|11|CIVIL
+1|AJAY|DELHI|10|12|ECE
+1|AJAY|DELHI|10|13|CC
+2|VIJAY|Jaipur|10|10|CSE
+2|VIJAY|Jaipur|10|11|CIVIL
+2|VIJAY|Jaipur|10|12|ECE
+2|VIJAY|Jaipur|10|13|CC
+3|RAM|KOLKATA|11|10|CSE
+3|RAM|KOLKATA|11|11|CIVIL
+3|RAM|KOLKATA|11|12|ECE
+3|RAM|KOLKATA|11|13|CC
+4|LAKHAN|KOLKATA|12|10|CSE
+4|LAKHAN|KOLKATA|12|11|CIVIL
+4|LAKHAN|KOLKATA|12|12|ECE
+4|LAKHAN|KOLKATA|12|13|CC
+5|BANSI LAL|BASVA|13|10|CSE
+5|BANSI LAL|BASVA|13|11|CIVIL
+5|BANSI LAL|BASVA|13|12|ECE
+5|BANSI LAL|BASVA|13|13|CC
+6|KUSHAGRA|RAIPUR|13|10|CSE
+6|KUSHAGRA|RAIPUR|13|11|CIVIL
+6|KUSHAGRA|RAIPUR|13|12|ECE
+6|KUSHAGRA|RAIPUR|13|13|CC
+7|KK MEENA|RAIPUR|10|10|CSE
+7|KK MEENA|RAIPUR|10|11|CIVIL
+7|KK MEENA|RAIPUR|10|12|ECE
+7|KK MEENA|RAIPUR|10|13|CC
+8|RADHA|BANJA|10|10|CSE
+8|RADHA|BANJA|10|11|CIVIL
+8|RADHA|BANJA|10|12|ECE
+8|RADHA|BANJA|10|13|CC
+9|DEHRU|KOTA|13|10|CSE
+9|DEHRU|KOTA|13|11|CIVIL
+9|DEHRU|KOTA|13|12|ECE
+9|DEHRU|KOTA|13|13|CC
+10|ACHRAJ|PUNE|12|10|CSE
+10|ACHRAJ|PUNE|12|11|CIVIL
+10|ACHRAJ|PUNE|12|12|ECE
+10|ACHRAJ|PUNE|12|13|CC
+sqlite> select name from student ,dept;
+AJAY
+AJAY
+AJAY
+AJAY
+VIJAY
+VIJAY
+VIJAY
+VIJAY
+RAM
+RAM
+RAM
+RAM
+LAKHAN
+LAKHAN
+LAKHAN
+LAKHAN
+BANSI LAL
+BANSI LAL
+BANSI LAL
+BANSI LAL
+KUSHAGRA
+KUSHAGRA
+KUSHAGRA
+KUSHAGRA
+KK MEENA
+KK MEENA
+KK MEENA
+KK MEENA
+RADHA
+RADHA
+RADHA
+RADHA
+DEHRU
+DEHRU
+DEHRU
+DEHRU
+ACHRAJ
+ACHRAJ
+ACHRAJ
+ACHRAJ
+sqlite> select * from student join dept on student.deptno = dept.deptno;
+1|AJAY|DELHI|10|10|CSE
+2|VIJAY|Jaipur|10|10|CSE
+3|RAM|KOLKATA|11|11|CIVIL
+4|LAKHAN|KOLKATA|12|12|ECE
+5|BANSI LAL|BASVA|13|13|CC
+6|KUSHAGRA|RAIPUR|13|13|CC
+7|KK MEENA|RAIPUR|10|10|CSE
+8|RADHA|BANJA|10|10|CSE
+9|DEHRU|KOTA|13|13|CC
+10|ACHRAJ|PUNE|12|12|ECE
+sqlite> select count(*) ,city from student group by city;
+1|BANJA
+1|BASVA
+1|DELHI
+1|Jaipur
+2|KOLKATA
+1|KOTA
+1|PUNE
+2|RAIPUR
+sqlite> select count(*) ,city from student group by city having count(*)>=2;
+2|KOLKATA
+2|RAIPUR
+sqlite> select count(*) from student;
+10
+sqlite> select count(name) from student;
+10
+sqlite> select count(distinct name) from student;
+10
+sqlite> select max(rollno) from student;
+10
+sqlite> select min(rollno) from student;
+1
+sqlite> select sum(rollno) from student;
+55
+sqlite> select avg(rollno) from student;
+5.5
+sqlite> select max(rollno),city  from student group by city;
+8|BANJA
+5|BASVA
+1|DELHI
+2|Jaipur
+4|KOLKATA
+9|KOTA
+10|PUNE
+7|RAIPUR
+sqlite> select count(rollno),city  from student group by city;
+1|BANJA
+1|BASVA
+1|DELHI
+1|Jaipur
+2|KOLKATA
+1|KOTA
+1|PUNE
+2|RAIPUR
+sqlite> select sum(rollno),city  from student group by city;
+8|BANJA
+5|BASVA
+1|DELHI
+2|Jaipur
+7|KOLKATA
+9|KOTA
+10|PUNE
+13|RAIPUR
+sqlite> select * from student where city = 'delhi' union select * from student where city  = 'pune';
+sqlite> select * from student where city = 'DELHI' union select * from student where city  = 'PUNE';
+1|AJAY|DELHI|10
+10|ACHRAJ|PUNE|12
+sqlite> select * from student where city = 'DELHI' intersect select * from student where city  = 'PUNE';
+sqlite> select * from student where city = 'DELHI' except select * from student where city  = 'PUNE';
+1|AJAY|DELHI|10
+sqlite> select * from student where name = 'ajay';
+sqlite> select * from student where name = 'AJAY';
+1|AJAY|DELHI|10
+sqlite> select * from student where city in (select city from students where name= 'AJAY');
+Parse error: no such table: students
+sqlite> select * from student where city in (select city from student where name= 'AJAY');
+1|AJAY|DELHI|10
+sqlite> select * from student where name = 'AJAY';^Z^Z^Z^Z
+;
+1|AJAY|DELHI|10
+sqlite> select * from student where deptno = (select deptno fromstudent where name = 'AJAy')
+   ...> select * from student where deptno = (select deptno fromstudent where name = 'AJAY')
+   ...> ;
+Parse error: near "select": syntax error
+  = (select deptno fromstudent where name = 'AJAy') select * from student where
+                                      error here ---^
+sqlite> select * from student where deptno = (select deptno fromstudent where name = 'AJAY');
+1|AJAY|DELHI|10
+sqlite> select * from student where deptno = (select deptno from student where name = 'AJAY');
+1|AJAY|DELHI|10
+2|VIJAY|Jaipur|10
+7|KK MEENA|RAIPUR|10
+8|RADHA|BANJA|10
+sqlite> select * from student where rollno > (select rollno from student where name = 'AJAY');
+2|VIJAY|Jaipur|10
+3|RAM|KOLKATA|11
+4|LAKHAN|KOLKATA|12
+5|BANSI LAL|BASVA|13
+6|KUSHAGRA|RAIPUR|13
+7|KK MEENA|RAIPUR|10
+8|RADHA|BANJA|10
+9|DEHRU|KOTA|13
+10|ACHRAJ|PUNE|12
+sqlite> select * from student where rollno > (select rollno from student where name = 'BANSI
+'  ...> ;
+'  ...> ;
+'  ...> ;
+'  ...> ;
+'  ...> ;
+'  ...> ^ZProgram interrupted.
+PS C:\sqlLite>
+>> ^C
+PS C:\sqlLite> C:\\sqlLite\\sqlite3.exe
+SQLite version 3.46.0 2024-05-23 13:25:27 (UTF-16 console I/O)
+Enter ".help" for usage hints.
+Connected to a transient in-memory database.
+Use ".open FILENAME" to reopen on a persistent database.
+sqlite> select * from student where rollno > (select rollno from student where name = 'BANSI');
+Parse error: no such table: student
+sqlite> .TABLES
+Error: unknown command or invalid arguments:  "TABLES". Enter ".help" for help
+sqlite> .table
+sqlite> .tables
+sqlite> .open univ
+sqlite> .table
+sqlite> .tables
+sqlite> .help
+.archive ...             Manage SQL archives
+.auth ON|OFF             Show authorizer callbacks
+.backup ?DB? FILE        Backup DB (default "main") to FILE
+.bail on|off             Stop after hitting an error.  Default OFF
+.cd DIRECTORY            Change the working directory to DIRECTORY
+.changes on|off          Show number of rows changed by SQL
+.check GLOB              Fail if output since .testcase does not match
+.clone NEWDB             Clone data into NEWDB from the existing database
+.connection [close] [#]  Open or close an auxiliary database connection
+.crnl on|off             Translate \n to \r\n.  Default ON
+.databases               List names and files of attached databases
+.dbconfig ?op? ?val?     List or change sqlite3_db_config() options
+.dbinfo ?DB?             Show status information about the database
+.dump ?OBJECTS?          Render database content as SQL
+.echo on|off             Turn command echo on or off
+.eqp on|off|full|...     Enable or disable automatic EXPLAIN QUERY PLAN
+.excel                   Display the output of next command in spreadsheet
+.exit ?CODE?             Exit this program with return-code CODE
+.expert                  EXPERIMENTAL. Suggest indexes for queries
+.explain ?on|off|auto?   Change the EXPLAIN formatting mode.  Default: auto
+.filectrl CMD ...        Run various sqlite3_file_control() operations
+.fullschema ?--indent?   Show schema and the content of sqlite_stat tables
+.headers on|off          Turn display of headers on or off
+.help ?-all? ?PATTERN?   Show help text for PATTERN
+.import FILE TABLE       Import data from FILE into TABLE
+.indexes ?TABLE?         Show names of indexes
+.intck ?STEPS_PER_UNLOCK?  Run an incremental integrity check on the db
+.limit ?LIMIT? ?VAL?     Display or change the value of an SQLITE_LIMIT
+.lint OPTIONS            Report potential schema issues.
+.load FILE ?ENTRY?       Load an extension library
+.log FILE|on|off         Turn logging on or off.  FILE can be stderr/stdout
+.mode MODE ?OPTIONS?     Set output mode
+.nonce STRING            Suspend safe mode for one command if nonce matches
+.nullvalue STRING        Use STRING in place of NULL values
+.once ?OPTIONS? ?FILE?   Output for the next SQL command only to FILE
+.open ?OPTIONS? ?FILE?   Close existing database and reopen FILE
+.output ?FILE?           Send output to FILE or stdout if FILE is omitted
+.parameter CMD ...       Manage SQL parameter bindings
+.print STRING...         Print literal STRING
+.progress N              Invoke progress handler after every N opcodes
+.prompt MAIN CONTINUE    Replace the standard prompts
+.quit                    Stop interpreting input stream, exit if primary.
+.read FILE               Read input from FILE or command output
+.recover                 Recover as much data as possible from corrupt db.
+.restore ?DB? FILE       Restore content of DB (default "main") from FILE
+.save ?OPTIONS? FILE     Write database to FILE (an alias for .backup ...)
+.scanstats on|off|est    Turn sqlite3_stmt_scanstatus() metrics on or off
+.schema ?PATTERN?        Show the CREATE statements matching PATTERN
+.separator COL ?ROW?     Change the column and row separators
+.session ?NAME? CMD ...  Create or control sessions
+.sha3sum ...             Compute a SHA3 hash of database content
+.shell CMD ARGS...       Run CMD ARGS... in a system shell
+.show                    Show the current values for various settings
+.stats ?ARG?             Show stats or turn stats on or off
+.system CMD ARGS...      Run CMD ARGS... in a system shell
+.tables ?TABLE?          List names of tables matching LIKE pattern TABLE
+.timeout MS              Try opening locked tables for MS milliseconds
+.timer on|off            Turn SQL timer on or off
+.trace ?OPTIONS?         Output each SQL statement as it is run
+.version                 Show source, library and compiler versions
+.vfsinfo ?AUX?           Information about the top-level VFS
+.vfslist                 List all available VFSes
+.vfsname ?AUX?           Print the name of the VFS stack
+.width NUM1 NUM2 ...     Set minimum column widths for columnar output
+sqlite> .databases
+main: C:\sqlLite\univ r/w
+sqlite> .tables
+sqlite> .open univ
+sqlite> .tables
+sqlite> .tables
+sqlite>
