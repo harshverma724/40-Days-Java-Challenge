@@ -47,5 +47,5 @@ I should have a thorough understanding of Java programming by the conclusion of 
 - (16-06-2024) Day 34: Hashing, TreeMap , HashMap , Linked HashMaop, Linked HashSet, HashTable, Properties, String Tokenizer, BitSet, 10 Programs Based on these topics, 1 Project(Accounts).
 - (17-06-2024) Day 35: Date & Time Class, New Date & Time API(joda), Network Programming, Socket and Server Socket, Multithreaded Socket and Server Socket, Datagram Communication.
 - (18-06-2024) Day 36: JDBC(Java Database Connectivity), SQL Queries, Sql Aggregate Functions, SQL Set Operations, SQL SubQuery and DML, JDBC Drivers. 1 Notepad file containing sqlite Queries.
-- (19-06-2024) Day 37: Abstract Window Toolkit(AWT), Event Delegation, Components Of AWT, 
+- (19-06-2024) Day 37: Abstract Window Toolkit(AWT), Event Delegation, Components Of AWT, 8 Programs on these topics.
 - To Be Continued....
