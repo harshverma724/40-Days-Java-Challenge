@@ -49,5 +49,5 @@ I should have a thorough understanding of Java programming by the conclusion of 
 - (18-06-2024) Day 36: JDBC(Java Database Connectivity), SQL Queries, Sql Aggregate Functions, SQL Set Operations, SQL SubQuery and DML, JDBC Drivers. 1 Notepad file containing sqlite Queries.
 - (19-06-2024) Day 37: Abstract Window Toolkit(AWT), Event Delegation, Components Of AWT, 8 Programs on these topics.
 - (20-06-2024) Day 38: Abstract Window Toolkit(AWT), Various Type of Event Handlers, 15 Programs Based on these topics.
-- (21-06-2024) Day 39: Java Swing, 
+- (21-06-2024) Day 39: Java Swing, Components of Swing, 
 - To Be Continued....
