@@ -50,5 +50,5 @@ I should have a thorough understanding of Java programming by the conclusion of 
 - (19-06-2024) Day 37: Abstract Window Toolkit(AWT), Event Delegation, Components Of AWT, 8 Programs on these topics.
 - (20-06-2024) Day 38: Abstract Window Toolkit(AWT), Various Type of Event Handlers, 15 Programs Based on these topics.
 - (21-06-2024) Day 39: Java Swing, Components of Swing, Functions of Swing, 7 Window Application Programs on this topic.
-- (22-06-2024) Day 40: JavaFX , Installation
+- (22-06-2024) Day 40: JavaFX , Installation & Configuration,
 - To Be Continued....
