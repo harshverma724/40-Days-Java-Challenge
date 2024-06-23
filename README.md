@@ -51,4 +51,6 @@ I should have a thorough understanding of Java programming by the conclusion of 
 - (20-06-2024) Day 38: Abstract Window Toolkit(AWT), Various Type of Event Handlers, 15 Programs Based on these topics.
 - (21-06-2024) Day 39: Java Swing, Components of Swing, Functions of Swing, 7 Window Application Programs on this topic.
 - (22-06-2024) Day 40: JavaFX , Installation & Configuration, Base Concepts, 5 Programs Based on JavaFX.
+
+I have successfully completed the Udemy course "Learn JAVA Programming - Beginner to Master"! This comprehensive course has been an incredible journey, covering the essential aspects of Java programming and beyond.
 - Lets see whats next....
