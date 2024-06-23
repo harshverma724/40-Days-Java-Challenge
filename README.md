@@ -60,7 +60,7 @@ Course Highlights:
 - Beginner to Mastery: The course took me from the basics of Java programming to advanced features, making complex concepts simple and accessible.
 - Real-Life Examples: Each topic was explained with practical, real-life examples, ensuring a deep and intuitive understanding.
 - Comprehensive Coverage: The course covered a wide range of topics, including Methods, Object-Orientation, Inheritance, Multithreading, AWT, Swing, Collection Framework, and Networking.
-- 
+
 What I Learned:
 
 - Java Fundamentals: Introduction to Java, setting up the Java environment, operators, expressions, and the String class.
