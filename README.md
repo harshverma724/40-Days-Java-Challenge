@@ -69,31 +69,31 @@ Frameworks and GUI: Collection Framework, network programming, AWT, and Swing.
 By the end of this course, I have gained a thorough understanding of Java and am confident in my ability to develop robust Java applications. This experience has truly prepared me to be as productive as a software developer.
 
 Course Contents:
--Introduction to Java
--Setting Up Java Environment
--Operators and Expressions
--String Class and Printing
--Conditional Statements
--Loops
--Arrays
--Methods
--Object-Oriented Programming
--Inheritance
--Abstract Classes
--Interfaces
--Inner Classes
--Static and Final
--Packages
--Exception Handling
--Multithreading
--java.lang Package
--Annotations and Javadoc
--Lambda Expressions
--Java IO
--Collection Framework
--Network Programming
--AWT
--Swing
+- Introduction to Java
+- Setting Up Java Environment
+- Operators and Expressions
+- String Class and Printing
+- Conditional Statements
+- Loops
+- Arrays
+- Methods
+- Object-Oriented Programming
+- Inheritance
+- Abstract Classes
+- Interfaces
+- Inner Classes
+- Static and Final
+- Packages
+- Exception Handling
+- Multithreading
+- java.lang Package
+- Annotations and Javadoc
+- Lambda Expressions
+- Java IO
+- Collection Framework
+- Network Programming
+- AWT
+- Swing
 
 I'm excited to apply my newfound skills in future projects and continue my journey in the world of programming!
 - Lets see whats next....
