@@ -4,7 +4,7 @@ public class print {
     public static void main(String[] args) {
         int a = 10;
         float b = 12.56f;
-        char c = 'A';
+        char c = 'A'; 
         String d = "Harsh";
 
         System.out.print("Values are: " + a + " , " + b + " , " + c + " , " + d);
